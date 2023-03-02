@@ -8,9 +8,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.3/firebase
 import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore.js"
 import { getFirestore, collection, getDocs} from 'firebase/firestore/lite';
 
-import{collection
-}
-
+import {collection
+};
 // Your web app's Firebase configuration
 // NB! HER KOMMER DINE UNIKE KODER
 const firebaseConfig = {
