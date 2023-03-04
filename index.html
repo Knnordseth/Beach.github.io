@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beach menu</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+
+    <h1>welcome to da beach</h1> 
+    <h2>meny</h2>
 
     <div class="topnav">
         <a class="active" href="#home">Home</a>
         <a href="#news">Activiteies</a>
         <a href="#contact">Contact</a>
         <a href="#leggtilmeny">meny input</a>
-      </div>
-      <h1>meny</h1> 
-      <h2>welcome to da beach</h2>
+      </div> 
 
+    </div>
     <div id="leggtilmeny">
-        <input type="text" id="addoc_food">Forret</input>
-        <input type="text" id="addoc_food">hovedrett</input>
-        <input type="text" id="addoc_food">desert </input>
 
         <form>
             <label for="inputBox1">Field 1:</label>
@@ -31,14 +31,20 @@
             <button type="button" id="addButton">Add to menu</button>
         </form>
     </div>
+
+    <div id="activities">
+    <h1>Activities</h1>
+    <button id="viweAct">wiev all activities</button>
+
+    </div>
    
     <script type="module">
+
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js";
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
         import { getFirestore, addDoc, collection } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore.js"
-
       
         // Your web app's Firebase configuration
         const firebaseConfig = {
@@ -48,13 +54,15 @@
         storageBucket: "white-sand-beach.appspot.com",
         messagingSenderId: "195541876312",
         appId: "1:195541876312:web:9c2e5805b988c51071542d",
-   };
+        };
       
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
 
         const db = getFirestore();
+        
       </script>
+      
     <script src="/script.js"></script>
     <!-- <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script> -->
