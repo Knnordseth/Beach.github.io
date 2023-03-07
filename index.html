@@ -10,34 +10,41 @@
 </head>
 <body>
 
-    <h1>welcome to da beach</h1> 
+    <h1>welcome to da beach</h1>
     <h2>meny</h2>
 
     <div class="topnav">
+    <a href="#leggtilmeny">meny</a>
         <a class="active" href="#home">Home</a>
-        <a href="#news">Activiteies</a>
-        <a href="#contact">Contact</a>
-        <a href="#leggtilmeny">meny input</a>
-      </div> 
+      </div>
 
     </div>
     <div id="leggtilmeny">
 
         <form>
-            <label for="inputBox1">Field 1:</label>
-            <input type="text" id="inputBox1" name="field1"><br>
-            <label for="inputBox2">Field 2:</label>
-            <input type="text" id="inputBox2" name="field2"><br>
-            <button type="button" id="addButton">Add to menu</button>
+            <label for="inputBox1">hovedrett:  </label>
+            <input type="text" id="inputBox1" name="hovedrett">
+            <br>
+            <label for="inputBox2">Desert:</label>
+            <input type="text" id="inputBox2" name="Desert">
+
+            <button type="button" id="leggtilmeny">Add hovedrett to meny</button> 
+            <button type="button" id="leggtilmeny">Add Desert to meny </button> 
         </form>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
     <div id="activities">
-    <h1>Activities</h1>
-    <button id="viweAct">wiev all activities</button>
-
+    <h1 id="activities">Activities</h1>
+    <button id="viewActBtn">Display</button>
+    <p id="viewAct">aktiviteter idag:</p>
+    <!-- <img id="myImage" src="placeholder.jpg" alt="blank"> -->
     </div>
-   
+
     <script type="module">
 
         // Import the functions you need from the SDKs you need
@@ -45,7 +52,7 @@
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
         import { getFirestore, addDoc, collection } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore.js"
-      
+
         // Your web app's Firebase configuration
         const firebaseConfig = {
         apiKey: "AIzaSyCrCsxxIIYTUpF8uJ12a49UTsDx9KIrbtU",
@@ -55,14 +62,33 @@
         messagingSenderId: "195541876312",
         appId: "1:195541876312:web:9c2e5805b988c51071542d",
         };
-      
+
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
 
         const db = getFirestore();
         
+        document.getElementById("leggtilmeny").addEventListener("click", addDocFOOD)
+
+        function addDocFOOD() {
+        const input = document.getElementById("inputBox1","inputbox2").value; // retrieve input data
+        if (input === "") {
+
+        } else {
+        addDoc(_hovedrett_, { Text: input }); // legg til i hovedrett collection?
+        }}
+
+        
+        // display all activities inni activites tab i firestore tingen
+        // const ACTV10 = document.getElementById("ViewAct")
+
+        // ACTV10.addEventlistener("click", randomshitGO())
+        // function randomshitGO() {
+        // const activityDoc = db.collection("activities").doc("activities");
+        // } 
+
       </script>
-      
+
     <script src="/script.js"></script>
     <!-- <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script> -->
